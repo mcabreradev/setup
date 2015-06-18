@@ -1,0 +1,31 @@
+"*":
+  editor:
+    lineHeight: 1.8
+    showInvisibles: true
+    autoIndentOnPaste: false
+    invisibles: {}
+    softWrapHangingIndent: 1
+    fontFamily: "Source Code Pro"
+    fontSize: 15
+  core:
+    disabledPackages: [
+      "language-objective-c"
+      "vim-mode"
+    ]
+    themes: [
+      "seti-ui"
+      "seti-monokai"
+    ]
+  "exception-reporting":
+    userId: "33e80794-f98d-ab89-437d-6d310962da94"
+  welcome:
+    showOnStartup: false
+  "atom-beautify":
+    _analyticsUserId: "5adcbc12-fe6b-4df2-9a09-d52dd3b34daa"
+    js_space_in_paren: true
+  docblockr:
+    auto_add_method_tag: true
+    development_mode: true
+    extra_tags_go_after: true
+  linter: {}
+  minimap: {}
