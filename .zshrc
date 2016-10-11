@@ -1,14 +1,19 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+  export ZSH=/home/migue/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="cloud"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -45,17 +50,17 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bower coffee composer larave laravel4 laravel5 npm ruby rails sublime textmate vagrant zsh_reload)
-
-source $ZSH/oh-my-zsh.sh
+plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+  export PATH="/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/migue/.local/bin:/home/migue/bin:/home/migue/n/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+source $ZSH/oh-my-zsh.sh
+
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -68,7 +73,7 @@ export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -79,4 +84,26 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# User specific aliases and functions
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# RUBY
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Composer
+export PATH="$PATH:$HOME/.composer/vendor/bin" # Composer
+
+# PYTHON
+export PATH="/usr/local/p/versions/python:$PATH"
+
+# NODE
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+# GOLANG
+export GOPATH="/home/migue/golang"
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
